@@ -1,6 +1,7 @@
 
 package hitblow;
 
+import java.util.Random;
 import java.util.Scanner;   //キーボードから入力するために必要なScannerクラスを使用する宣言
 
 
@@ -8,13 +9,24 @@ public class HitBlow {
 
     public static void main(String[] args) {
 
+        
         //４つの数字を配列に入れておく（正解）
         int seikai[] = new int[4]; 
+        /*
         seikai[0] = 1;
         seikai[1] = 2;
         seikai[2] = 3;
         seikai[3] = 4;
+        */
+        
+        //このやり方では数が重複する
+        Random rnd = new Random();
+        seikai[0] = rnd.nextInt(9) + 1;
+        seikai[1] = rnd.nextInt(9) + 1;
+        seikai[2] = rnd.nextInt(9) + 1;
+        seikai[3] = rnd.nextInt(9) + 1;
 
+        
         //解答用配列
         int kaitou[] = new int[4];
         
